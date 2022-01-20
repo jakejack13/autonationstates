@@ -1,10 +1,12 @@
+"""The runner for autonationstates
+
+@author Jacob Kerr"""
+
 import os
-import time
 import asyncio
 import random
 
 import pause
-from bs4 import BeautifulSoup
 from dotenv import load_dotenv
 load_dotenv()
 

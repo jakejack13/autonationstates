@@ -1,3 +1,7 @@
+"""The wrapper for the NationStates API that allows control of nations
+
+@author Jacob Kerr"""
+
 import requests
 from bs4 import BeautifulSoup
 from bs4.element import Tag
@@ -17,7 +21,7 @@ class NationStates:
     _pin: str
 
     def __init__(self, nation: str, password: str) -> None:
-        """Creates a new NationStates API middleware with nation `nation` and password `password`"""
+        """Creates a new NationStates API wrapper with nation `nation` and password `password`"""
         self.nation = nation
         self._first_auth(password)
 
