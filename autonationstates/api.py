@@ -8,17 +8,28 @@ from bs4.element import Tag
 
 
 BASEURL = 'https://www.nationstates.net/cgi-bin/api.cgi'
+"""The base url for all API requests"""
 USERAGENT = 'github.com/jakejack13'
+"""The UserAgent used to identify the wrapper with the API"""
 REAUTHCODE = 403
+"""The code received that requires a reauthentication"""
+
 
 class AuthenticationError(Exception):
+    """An exception thrown when the account's password is changed during 
+    runtime"""
     pass
 
+
 class NationStates:
+    """The wrapper for the NationStates API that allows control of nations"""
 
     nation: str
+    """The username of the nation"""
     _autologin: str
+    """The autologin code used for authentication"""
     _pin: str
+    """The pin used for authentication"""
 
     def __init__(self, nation: str, password: str) -> None:
         """Creates a new NationStates API wrapper with nation `nation` and password `password`"""
