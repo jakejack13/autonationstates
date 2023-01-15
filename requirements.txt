@@ -1,4 +1,5 @@
 requests
-dotenv
+python-dotenv
 bs4
 pause
+lxml
